@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Mahasiswa</title>
+</head>
+<body>
+
+    <h1>Profil Mahasiswa</h1>
+    <hr>
+
+    <h2>Data Diri</h2>
+    <img src="image/Valdo.jpg"
+         alt="Foto Mahasiswa"
+         width="150">
+
+    <p><b>Nama:</b> Rivaldo Jose Da Costa</p>
+    <p><b>NIM:</b> 252520017</p>
+    <p><b>Kelas:</b> B</p>
+    <p><b>Program Studi:</b> Teknologi Informasi</p>
+    <p>
+        <h2><b>Halo! Saya Adalah Mahasiswa Teknologi Informasi dan Saya Berasal Dari Timor-Leste.</b>
+        </h2>
+    </p>
+
+    <h2>Hobi Saya</h2>
+    <ul>
+        <li>Futsal</li>
+        <li>Bermain game</li>
+        <li>Olahraga</li>
+        <li>Belajar pemrograman</li>
+    </ul>
+
+    <h2>Website Kampus</h2>
+    <p>
+        Kunjungi website kampus:
+        <a href="https://umpwr.ac.id"
+           target="UMPWR">
+            Website Kampus
+        </a>
+    </p>
+
+    <h2>Daftar Mata Kuliah</h2>
+    <table border="1" cellpadding="8" cellspacing="0">
+        <tr>
+            <th>No</th>
+            <th>Kode MK</th>
+            <th>Nama Mata Kuliah</th>
+            <th>SKS</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>MK_1</td>
+            <td>Pemrograman Web</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>MK_2</td>
+            <td>Estruktur Data</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>MK_3</td>
+            <td>Analisis dan Perancangan Sistem</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>MK_4</td>
+            <td>Sistem Operasi</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>MK_5</td>
+            <td>Etika Teknologi Informasi</td>
+            <td>3</td>
+        </tr>
+    </table>
+
+    <h2>Form Data Mahasiswa</h2>
+    <form action="#" method="post">
+
+        <label for="nama">Nama Lengkap:</label><br>
+        <input type="text" id="nama" name="nama"
+               placeholder="Masukkan nama" required>
+        <br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"
+               placeholder="Masukkan email" required>
+        <br><br>
+
+        <label>Jenis Kelamin:</label><br>
+        <input type="radio" id="laki" name="gender"
+               value="Laki-laki" required>
+        <label for="laki">Laki-laki</label>
+
+        <input type="radio" id="perempuan" name="gender"
+               value="Perempuan">
+        <label for="perempuan">Perempuan</label>
+        <br><br>
+
+        <button type="submit">Kirim</button>
+        <button type="reset">Reset</button>
+
+    </form>
+
+</body>
+</html>
