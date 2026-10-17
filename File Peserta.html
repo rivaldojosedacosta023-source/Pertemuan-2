@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Peserta</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f8ff;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #1a56b0;
+            text-align: center;
+            font-size: 32px;
+        }
+
+        form {
+            background: white;
+            border: 1px solid #ccd;
+            padding: 25px;
+            margin: 25px 0;
+        }
+
+        label {
+            display: inline-block;
+            width: 130px;
+            margin-bottom: 15px;
+        }
+
+        input[type="text"] {
+            width: 300px;
+            padding: 8px;
+            font-size: 16px;
+        }
+
+        select {
+            padding: 8px;
+            font-size: 16px;
+        }
+
+        button {
+            background: #1a56b0;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #13458d;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            background: white;
+        }
+
+        th {
+            background: #1a56b0;
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+
+        td {
+            border: 1px solid #ccd;
+            padding: 12px;
+        }
+
+        tr:nth-child(even) {
+            background: #e6eefb;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Pendaftaran Peserta</h1>
+
+    <form id="formPendaftaran">
+
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama"
+               placeholder="Masukkan nama" required>
+        <br><br>
+
+        <label>Jenis Kelamin:</label>
+        <input type="radio" name="jk" value="L" required> L
+        <input type="radio" name="jk" value="P"> P
+        <br><br>
+
+        <label for="jurusan">Jurusan:</label>
+        <select id="jurusan" name="jurusan">
+            <option value="Informatika">Informatika</option>
+            <option value="Sistem Informasi">Sistem Informasi</option>
+        </select>
+        <br><br>
+
+        <button type="submit">Kirim</button>
+
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Nama</th>
+                <th>Jurusan</th>
+            </tr>
+        </thead>
+
+        <tbody id="dataPeserta">
+            <tr>
+                <td>1</td>
+                <td>Budi Santoso</td>
+                <td>Informatika</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Sari Wulandari</td>
+                <td>Sistem Informasi</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        const form = document.getElementById("formPendaftaran");
+        const tabel = document.getElementById("dataPeserta");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const nama = document.getElementById("nama").value;
+            const jurusan = document.getElementById("jurusan").value;
+            const nomor = tabel.rows.length + 1;
+
+            const baris = tabel.insertRow();
+
+            baris.insertCell(0).textContent = nomor;
+            baris.insertCell(1).textContent = nama;
+            baris.insertCell(2).textContent = jurusan;
+
+            form.reset();
+        });
+    </script>
+
+</body>
+</html>
